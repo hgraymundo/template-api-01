@@ -34,8 +34,30 @@ module.exports = function(sequelize, Sequelize) {
     instagram: {
       type: Sequelize.STRING,
     },
-    webpage: {
-      type: Sequelize.STRING,
+    street: { 
+      type: Sequelize.STRING
+    },
+    colony: {
+      type: Sequelize.STRING
+    },
+    municipal: {
+      type: Sequelize.STRING
+    },
+    noExt: {
+        type: Sequelize.STRING
+    },
+    noInt: {
+        type: Sequelize.STRING
+    },
+    postalCode:{
+        type: Sequelize.STRING
+    },
+    state:{
+      type: Sequelize.STRING
+    },
+    country: {
+        type: Sequelize.STRING,
+        defaultValue: 'México'
     },
     status: {
       type: Sequelize.ENUM('Active', 'Inactive'),

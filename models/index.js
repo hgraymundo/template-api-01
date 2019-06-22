@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('buscamecomo', 'root', 'root', {
-  host: 'localhost',
+var sequelize = new Sequelize('FmwMGt7ksQ', 'FmwMGt7ksQ', 'YsuRQb0aPZ', {
+  host: 'remotemysql.com',
   dialect: 'mysql',
   operatorsAliases: false,
   pool: {
@@ -16,6 +16,8 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 //
 db.account  = require('./account.js')(sequelize, Sequelize);
+db.medico  = require('./medico.js')(sequelize, Sequelize);
+
 // db.user  = require('./user.js')(sequelize, Sequelize);
 // db.role  = require('./role.js')(sequelize, Sequelize);
 

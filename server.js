@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
 // setup Sequelize
 var models = require("./models");
 //Sync Database
-models.sequelize.sync({force: false }).then(function() {
+models.sequelize.sync({force: true }).then(function() {
     console.log('Nice! Database looks fine')
 }).catch(function(err) {
     console.log(err, "Something went wrong with the Database Update!")
@@ -87,6 +87,9 @@ app.use(passport.session());
 
 require('./route/account.js')(app);
 require('./route/category.js')(app);
+require('./route/company.js')(app);
+require('./route/medico.js')(app);
+
 
 //run server
 app.listen(env.PORT, ()=> {

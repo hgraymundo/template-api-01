@@ -5,9 +5,9 @@ var SubCategory = require('../models').subcategory;
 
 module.exports = function(app) {
   // CREATE
-  app.post('/company', (req, res) => {
-    console.log("NEW COMPANY");
-    req.checkBody("email", 'El campo de correo electrónico es obligatorio').isEmail().withMessage("El campo de correo electrónico no es válido.");
+  app.post('/hospital', (req, res) => {
+    console.log("NEW hispital");
+    req.checkBody("name", 'El campo de correo electrónico es obligatorio').isEmail().withMessage("El campo de correo electrónico no es válido.");
     req.checkBody("password").matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$/).trim().withMessage('La contraseña debe tener entre 6 y 15 caracteres, con al menos una mayúscula y un número.');
     req.checkBody("confirm_password","La confirmación de la contraseña no coincide con la contraseña.").equals(req.body.password);
     req.checkBody("terms","Es necesario aceptar los términos y condiciones.").equals('true');
@@ -25,7 +25,7 @@ module.exports = function(app) {
       Account.create({ email, password, terms})
       .then( result => {
         console.log(result);
-        let messages = [{ message: "Su cuenta se ha creado exitosamente, un correo electrónico de verificación y activación, se ha enviado."}];
+        let messages = [{ message: "Su registro se ha creado exitosamente."}];
         res.status(200).json( messages );
       })
       .catch( err => {
