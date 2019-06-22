@@ -1,0 +1,114 @@
+<%- include('../../partials/header'); %>
+<div class="app-content  my-3 my-md-5">
+    <div class="side-app">
+        <div class="row" style="margin-top: 10px;">
+            <!-- <% if (typeof errors == 'object' && errors) { %> 
+                <div class="text-danger errors">
+                    <%errors.forEach(function(error) { %>
+                        <li><%= error.message %></li>
+                    <% }); %>
+                    <% console.log(errors)%>
+                </div>
+            <% } %>    -->
+                    <!-- end col -->
+                    <div class="col-xl-12">
+                        <div class="card m-b-20">
+                            <div class="card-header">
+                                    <h3 class="card-title">Nuevo usuario</h3>
+                                    <div class="card-options">
+                                        <a href="/user" class="btn btn-sm btn-danger"><i class="fa fa-close"></i></a>
+                                    </div>
+                            </div>
+                            <div class="card-body mb-0">
+                                    <% if (typeof errors == 'object' && errors) { %> 
+                                            <%errors.forEach(function(error) { %>
+                                                <li><%= error.message %></li>
+                                            <% }); %>
+                                            <% console.log(errors)%>
+                                    <% } %> 
+                                <form method="post" action="/create-user" >
+                                        <div class="form-row" style="padding: 0px !important;">
+												<div class="form-group col-md-4">
+													<div class="form-group">
+														<label class="form-label" for="exampleInputEmail1">CURP</label>
+														<input type="text" class="form-control" id="curp" name="curp" placeholder="CURP">
+													</div>
+												</div>
+												<div class="form-group col-md-4">
+													<div class="form-group">
+														<label class="form-label" for="exampleInputEmail1">RFC</label>
+														<input type="text" class="form-control" id="rfc"  name="rfc" placeholder="RFC">
+													</div>
+												</div>
+                                        </div>
+                                        <div class="form-row" style="padding: 0px !important;">
+												<div class="form-group col-md-4">
+													<div class="form-group">
+														<label class="form-label" for="exampleInputEmail1">Nombre(s)</label>
+														<input type="text" id="firstname" name="firstname" value="<%=(locals.data)?data['firstname']:''%>" class="form-control" placeholder="Nombre(s)">
+                                                    </div>
+                                                    <div class="error"></div>
+												</div>
+												<div class="form-group col-md-4">
+													<div class="form-group">
+														<label class="form-label" for="exampleInputEmail1">Apellido Paterno</label>
+														<input type="text" id="lastname" name="lastname" value="<%=(locals.data)?data['lastname']:''%>" class="form-control" placeholder="Apellido paterno">
+													</div>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                        <div class="form-group">
+                                                            <label class="form-label" for="exampleInputEmail1">Apellido Materno</label>
+                                                            <input type="text" id="mlastname" name="mlastname"  class="form-control" placeholder="Apellido materno">
+                                                        </div>
+                                                    </div>
+                                        </div>
+                                        <div class="form-row" style="padding: 0px !important;">
+												<div class="form-group col-md-4">
+													<div class="form-group">
+														<label class="form-label" for="exampleInputEmail1">Correo electrónico</label>
+														<input type="email" id="email" name="email" value="<%=(locals.data)?data['email']:''%>" class="form-control" placeholder="usuario@dominio.com">
+													</div>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="exampleInputEmail1">Contraseña</label>
+                                                        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-4">
+													<div class="form-group">
+														<label class="form-label" for="exampleInputEmail1">Repetir contraseña</label>
+														<input type="password" id="repeat-password" name="repeat-password" class="form-control" placeholder="Repetir contraseña">
+													</div>
+                                                </div>
+                                                
+                                        </div>
+                                        <div class="form-row" style="padding: 0px !important;">
+												<div class="form-group col-md-4">
+													<div class="form-group">
+														<label class="form-label" for="exampleInputEmail1">Rol</label>
+														<select class="form-control" id="role" name="role">
+                                                                <option selected="">Seleccione una opción</option>
+                                                                <% for( var i=0; i < roles.length; i++) { %>
+                                                                    <option value="<%=roles[i].uuid%>" <%=(locals.data && data['role']==roles[i].uuid)?'selected':''%>>
+                                                                        <%=(roles[i].role).charAt(0).toUpperCase() + (roles[i].role).slice(1)%>
+                                                                    </option>
+                                                                <% } %>
+                                                            </select>
+													</div>
+                                                </div>                                    
+                                        </div>                                
+                            </div>
+                            <div class="card-footer text-right">
+                                <div class="d-flex">
+                                    <input type="submit" class="btn btn-primary ml-auto" value="Guardar">
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+</div>
+<%- include('../../partials/footer'); %>

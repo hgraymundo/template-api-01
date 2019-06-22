@@ -1,0 +1,421 @@
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<aside class="app-sidebar doc-sidebar">
+    <div class="app-sidebar__user clearfix">
+        <div class="dropdown user-pro-body">
+            <div>
+                <img src="data:image/jpeg;base64,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" alt="user-img" class="avatar avatar-lg brround">
+                <a href="editprofile.html" class="profile-img">
+                    <span class="fa fa-pencil" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="user-info">
+                <h2>Rubin Carmody</h2>
+                <span>Web Designer</span>
+            </div>
+        </div>
+    </div>
+    <ul class="side-menu">
+        <li>
+            <a class="side-menu__item"><i class="side-menu__icon fa fa-graduation-cap"></i><span class="side-menu__label">Estudiantes</span></a>
+        </li>
+        <li>
+            <a class="side-menu__item" href="/user"><i class="side-menu__icon fa fa-users"></i><span class="side-menu__label">Usuarios</span></a>
+        </li>
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-tachometer"></i><span class="side-menu__label">Dashboard</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li><a class="slide-item" href="index.html">Dashboard 1</a></li>
+                <li><a class="slide-item" href="index2.html">Dashboard 2</a></li>
+                <li><a class="slide-item" href="index3.html">Dashboard 3</a></li>
+                <li><a class="slide-item" href="index4.html">Dashboard 4</a></li>
+                <li><a class="slide-item" href="index5.html">Dashboard 5</a></li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cogs"></i><span class="side-menu__label">Admin settings</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li><a class="slide-item" href="admin-pricing.html">Admin Pricing</a></li>
+                <li><a class="slide-item" href="Ads.html">Ads List</a></li>
+                <li><a class="slide-item" href="comments.html">Comments</a></li>
+                <li><a class="slide-item" href="email-users.html">Email-Users</a></li>
+                <li><a class="slide-item" href="media-gallery.html">Media Gallery</a></li>
+                <li><a class="slide-item" href="newad.html">New Ad</a></li>
+                <li><a class="slide-item" href="newuser.html">New User</a></li>
+                <li><a class="slide-item" href="favourite-ads.html">Favourite-Ads</a></li>
+                <li><a class="slide-item" href="payment-orders.html">Payment Orders</a></li>
+                <li><a class="slide-item" href="payments-adpacks.html">Payment Adpacks</a></li>
+                <li><a class="slide-item" href="payment-settings.html">Payment Settings</a></li>
+                <li><a class="slide-item" href="payments-membership.html">Payment Membership</a></li>
+                <li><a class="slide-item" href="profile-admin.html">Profile Admin</a></li>
+                <li><a class="slide-item" href="settings.html">Settings</a></li>
+                <li><a class="slide-item" href="users-all.html">All Users</a></li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-rocket"></i><span class="side-menu__label">Apps</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="cards.html" class="slide-item">Cards design</a>
+                </li>
+                <li>
+                    <a href="chat.html" class="slide-item">Default Chat</a>
+                </li>
+                <li>
+                    <a href="notify.html" class="slide-item">Notifications</a>
+                </li>
+                <li>
+                    <a href="email.html" class="slide-item">Email</a>
+                </li>
+                <li>
+                    <a href="emailservices.html" class="slide-item">Email Inbox</a>
+                </li>
+                <li>
+                    <a href="sweetalert.html" class="slide-item">Sweet alerts</a>
+                </li>
+                <li>
+                    <a href="rangeslider.html" class="slide-item">Range slider</a>
+                </li>
+                <li>
+                    <a href="scroll.html" class="slide-item">Content Scroll bar</a>
+                </li>
+                <li>
+                    <a href="counters.html" class="slide-item">Counters</a>
+                </li>
+                <li>
+                    <a href="loaders.html" class="slide-item">Loaders</a>
+                </li>
+                <li>
+                    <a href="time-line.html" class="slide-item">Time Line</a>
+                </li>
+                <li>
+                    <a href="rating.html" class="slide-item">Rating </a>
+                </li>
+                <li>
+                    <a href="users-list.html" class="slide-item">User List</a>
+                </li>
+                <li>
+                    <a href="search.html" class="slide-item">Search page</a>
+                </li>
+                <li>
+                    <a href="crypto-currencies.html" class="slide-item">Crypto-currencies</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li>
+            <a class="side-menu__item" href="widgets.html"><i class="side-menu__icon fa fa-window-restore"></i><span class="side-menu__label">Widget</span></a>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-calendar"></i><span class="side-menu__label">Calendar</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="calendar.html" class="slide-item">Default calendar</a>
+                </li>
+                <li>
+                    <a href="calendar2.html" class="slide-item">Full calendar</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-bar-chart"></i><span class="side-menu__label">Charts</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="chart-chartist.html" class="slide-item">Chartjs Charts </a>
+                </li>
+                <li>
+                    <a href="chart-dygraph.html" class="slide-item">Dygraph Charts</a>
+                </li>
+                <li>
+                    <a href="chart-echart.html" class="slide-item">Echart Charts</a>
+                </li>
+                <li>
+                    <a href="chart-flot.html" class="slide-item">Flot Charts</a>
+                </li>
+                <li>
+                    <a href="chart-high.html" class="slide-item">High Charts</a>
+                </li>
+                <li>
+                    <a href="chart-nvd3.html" class="slide-item">Nvd3 Charts</a>
+                </li>
+                <li>
+                    <a href="sparklinechart.html" class="slide-item">Sparkline Chart</a>
+                </li>
+                <li>
+                    <a href="chart-morris.html" class="slide-item">Morris Charts</a>
+                </li>
+                <li>
+                    <a href="charts.html" class="slide-item">C3 Bar Charts</a>
+                </li>
+                <li>
+                    <a href="chart-line.html" class="slide-item">C3 Line Charts</a>
+                </li>
+                <li>
+                    <a href="chart-donut.html" class="slide-item">C3 Donut Charts</a>
+                </li>
+                <li>
+                    <a href="chart-pie.html" class="slide-item">C3 Pie charts</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-cubes"></i><span class="side-menu__label"> Elements</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="alerts.html" class="slide-item">Alerts</a>
+                </li>
+                <li>
+                    <a href="buttons.html" class="slide-item">Buttons</a>
+                </li>
+                <li>
+                    <a href="colors.html" class="slide-item">Colors</a>
+                </li>
+                <li>
+                    <a href="avatars.html" class="slide-item">Avatar-Square</a>
+                </li>
+                <li>
+                    <a href="avatar-round.html" class="slide-item">Avatar-Rounded</a>
+                </li>
+                <li>
+                    <a href="avatar-radius.html" class="slide-item">Avatar-Radius</a>
+                </li>
+                <li>
+                    <a href="dropdown.html" class="slide-item">Drop downs</a>
+                </li>
+                <li>
+                    <a href="thumbnails.html" class="slide-item">Thumbnails</a>
+                </li>
+                <li>
+                    <a href="mediaobject.html" class="slide-item">Media Object</a>
+                </li>
+                <li>
+                    <a href="list.html" class="slide-item">List</a>
+                </li>
+                <li>
+                    <a href="tags.html" class="slide-item">Tags</a>
+                </li>
+                <li>
+                    <a href="pagination.html" class="slide-item">Pagination</a>
+                </li>
+                <li>
+                    <a href="navigation.html" class="slide-item">Navigation</a>
+                </li>
+                <li>
+                    <a href="typography.html" class="slide-item">Typography</a>
+                </li>
+                <li>
+                    <a href="breadcrumbs.html" class="slide-item">Breadcrumbs</a>
+                </li>
+                <li>
+                    <a href="badge.html" class="slide-item">Badges</a>
+                </li>
+                <li>
+                    <a href="jumbotron.html" class="slide-item">Jumbotron</a>
+                </li>
+                <li>
+                    <a href="panels.html" class="slide-item">Panels</a>
+                </li>
+                <li>
+                    <a href="modal.html" class="slide-item">Modal</a>
+                </li>
+                <li>
+                    <a href="tooltipandpopover.html" class="slide-item">Tooltip and popover</a>
+                </li>
+                <li>
+                    <a href="progress.html" class="slide-item">Progress</a>
+                </li>
+                <li>
+                    <a href="carousel.html" class="slide-item">Carousels</a>
+                </li>
+                <li>
+                    <a href="Accordion.html" class="slide-item">Accordions</a>
+                </li>
+                <li>
+                    <a href="tabs.html" class="slide-item">Tabs</a>
+                </li>
+                <li>
+                    <a href="headers.html" class="slide-item">Headers</a>
+                </li>
+                <li>
+                    <a href="footers.html" class="slide-item">Footers</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-th-large"></i><span class="side-menu__label">Forms</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="form-elements.html" class="slide-item">Form Elements</a>
+                </li>
+                <li>
+                    <a href="form-wizard.html" class="slide-item">Form-wizard Elements</a>
+                </li>
+                <li>
+                    <a href="wysiwyag.html" class="slide-item">Text Editor</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-table"></i><span class="side-menu__label">Tables</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="tables.html" class="slide-item">Default table</a>
+                </li>
+                <li>
+                    <a href="datatable.html" class="slide-item">Data Table</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="side-menu__item" href="maps.html"><i class="side-menu__icon fa fa-map-marker"></i><span class="side-menu__label"> Maps</span></a>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-codepen"></i><span class="side-menu__label">Icons</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="icons.html" class="slide-item">Font Awesome</a>
+                </li>
+                <li>
+                    <a href="icons2.html" class="slide-item">Material Design Icons</a>
+                </li>
+                <li>
+                    <a href="icons3.html" class="slide-item">Simple Line Iocns</a>
+                </li>
+                <li>
+                    <a href="icons4.html" class="slide-item">Feather Icons</a>
+                </li>
+                <li>
+                    <a href="icons5.html" class="slide-item">Ionic Icons</a>
+                </li>
+                <li>
+                    <a href="icons6.html" class="slide-item">Flag Icons</a>
+                </li>
+                <li>
+                    <a href="icons7.html" class="slide-item">pe7 Icons</a>
+                </li>
+                <li>
+                    <a href="icons8.html" class="slide-item">Themify Icons</a>
+                </li>
+                <li>
+                    <a href="icons9.html" class="slide-item">Typicons Icons</a>
+                </li>
+                <li>
+                    <a href="icons10.html" class="slide-item">Weather Icons</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-database"></i><span class="side-menu__label">Pages</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="profile.html" class="slide-item">Profile</a>
+                </li>
+                <li>
+                    <a href="editprofile.html" class="slide-item">Edit Profile</a>
+                </li>
+                <li>
+                    <a href="gallery.html" class="slide-item">Gallery</a>
+                </li>
+                <li>
+                    <a href="about.html" class="slide-item">About Company</a>
+                </li>
+                <li>
+                    <a href="company-history.html" class="slide-item">Company History</a>
+                </li>
+                <li>
+                    <a href="services.html" class="slide-item">Services</a>
+                </li>
+                <li>
+                    <a href="faq.html" class="slide-item">FAQS</a>
+                </li>
+                <li>
+                    <a href="terms.html" class="slide-item">Terms and Conditions</a>
+                </li>
+                <li>
+                    <a href="empty.html" class="slide-item">Empty Page</a>
+                </li>
+                <li>
+                    <a href="construction.html" class="slide-item">Under Construction</a>
+                </li>
+                <li>
+                    <a href="blog.html" class="slide-item">Blog</a>
+                </li>
+                <li>
+                    <a href="invoice.html" class="slide-item">Invoice</a>
+                </li>
+                <li>
+                    <a href="pricing.html" class="slide-item">Pricing Tables</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-shopping-cart"></i><span class="side-menu__label">E-commerce</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="shop.html" class="slide-item">Products</a>
+                </li>
+                <li>
+                    <a href="shop-des.html" class="slide-item">Product Details</a>
+                </li>
+                <li>
+                    <a href="cart.html" class="slide-item">Shopping Cart</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-chain-broken"></i><span class="side-menu__label">Custom  Pages</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="login.html" class="slide-item">Login</a>
+                </li>
+                <li>
+                    <a href="register.html" class="slide-item">Register</a>
+                </li>
+                <li>
+                    <a href="forgot-password.html" class="slide-item">Forgot password</a>
+                </li>
+                <li>
+                    <a href="lockscreen.html" class="slide-item">Lock screen</a>
+                </li>
+            </ul>
+        </li> -->
+        <!-- <li class="slide">
+            <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-diamond"></i><span class="side-menu__label">Error pages</span><i class="angle fa fa-angle-right"></i></a>
+            <ul class="slide-menu">
+                <li>
+                    <a href="400.html" class="slide-item">400 Error</a>
+                </li>
+                <li>
+                    <a href="401.html" class="slide-item">401 Error</a>
+                </li>
+                <li>
+                    <a href="403.html" class="slide-item">403 Error</a>
+                </li>
+                <li>
+                    <a href="404.html" class="slide-item">404 Error</a>
+                </li>
+                <li>
+                    <a href="500.html" class="slide-item">500 Error</a>
+                </li>
+                <li>
+                    <a href="503.html" class="slide-item">503 Error</a>
+                </li>
+            </ul>
+        </li> -->
+    </ul>
+    <div class="app-sidebar-footer">
+        <a href="emailservices.html">
+            <span class="fa fa-envelope" aria-hidden="true"></span>
+        </a>
+        <a href="profile.html">
+            <span class="fa fa-user" aria-hidden="true"></span>
+        </a>
+        <a href="editprofile.html">
+            <span class="fa fa-cog" aria-hidden="true"></span>
+        </a>
+        <a href="login.html">
+            <span class="fa fa-sign-in" aria-hidden="true"></span>
+            </a>
+        <a href="chat.html">
+            <span class="fa fa-comment" aria-hidden="true"></span>
+        </a>
+    </div>
+</aside>

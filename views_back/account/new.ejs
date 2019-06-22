@@ -1,0 +1,67 @@
+<%- include('../partials/header01'); %>
+
+<div class="page">
+    <div class="page-content z-index-10">
+        <div class="container">
+            <div class="row">
+                     
+                <div class="col-xl-5 col-md-12 col-md-12 d-block mx-auto">
+                    <% if (typeof errors == 'object' && errors) { %> 
+                        <div class="text-danger errors" style="background-color: rgba(231, 76, 60, 0.15); border-radius: 4px;">
+                            <%errors.forEach(function(error) { %>
+                                <li style="font-size: 80%;"><%= error.message %></li>
+                            <% }); %>
+                        </div>
+                    <% } %>
+                    <div class="card mb-xl-0">
+                        <div class="card-header">
+                            <h3 class="card-title">Create Account</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="/initial/account/create-account" method="POST" autocomplete="off">
+                                <div class="form-group">
+                                    <label class="form-label text-dark"><span class="field-require">*</span>Firstname</label>
+                                    <input type="text" name="firstname" value="<%=(locals.data)?data['firstname']:''%>" class="form-control" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-dark"><span class="field-require">*</span>Last name</label>
+                                    <input type="text" name="lastname" value="<%=(locals.data)?data['lastname']:''%>" class="form-control" placeholder="Enter last name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-dark">Mother's last name</label>
+                                    <input type="text" name="mlastname" value="<%=(locals.data)?data['mlastname']:''%>" class="form-control" placeholder="Enter mother's last name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-dark"><span class="field-require">*</span>Email address</label>
+                                    <input type="email" name="email" value="<%=(locals.data)?data['email']:''%>" class="form-control" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-dark"><span class="field-require">*</span>Password</label>
+                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label text-dark"><span class="field-require">*</span>Repeat Password</label>
+                                    <input type="password" name="repeat-password" class="form-control" placeholder="Repeat password">
+                                </div>
+                                <div class="form-group">
+                                    <label class="custom-control custom-checkbox">
+                                        <input type="checkbox" name="terms" <%=(locals.data && data['terms']=='on' )?'checked':''%> class="custom-control-input">
+                                        <span class="custom-control-label text-dark">Agree the <a href="terms.html">terms and policy</a></span>
+                                    </label>
+                                </div>
+                                <div class="form-footer mt-2">
+                                    <input type="submit" class="btn btn-primary btn-block" value="Create New Account">
+                                </div>
+                            </form>
+                            <div class="text-center mt-3 text-dark">
+                                Already have account?<a href="register.html">SignIn</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer01'); %>

@@ -1,0 +1,33 @@
+body, html {
+  color: #2c3e50;
+  font-size: 100%;
+  font-weight: 300;
+}
+body {
+    /* min-height: 75rem;
+    padding-top: 4.5rem;
+    margin-bottom: 60px; */
+}
+body > .container {
+    padding: 70px 15px 0;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+/*NavBar*/
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+/*main container*/
+.container {
+  display: block;
+}
+/* form components */
+
+/* table */
+
+/*footer*/
