@@ -34,7 +34,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 //route base
 app.get("/", (req, res) => {
-  res.json({ msg: "API BUSCAMECOMO"});
+  res.json({ msg: "API TEMPLATE"});
 });
 // setup Sequelize
 var models = require("./models");
